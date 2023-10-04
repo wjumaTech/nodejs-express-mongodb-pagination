@@ -1,0 +1,17 @@
+div.ui.two.column.centered.grid
+	.column
+		form.ui.form.mt-5(method="POST" action="/products/create")
+			div.field
+				label Title
+				input(type="text" name="title" placeholder="title")
+			div.field
+				label Category
+				input(type="text" name="category" placeholder="title")
+			div.field
+				label Image
+				input(type="text" name="image" placeholder="title")
+			div.field
+				label Description
+				textarea(name="description")
+			div.field
+				button(type="submit").button.ui.secondary Create product

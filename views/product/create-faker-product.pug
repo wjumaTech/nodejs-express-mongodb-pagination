@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	h1 Create Faker Product
+
+	div.ui.two.column.centered.grid
+		.column
+			form.ui.form.mt-5(method="POST" action="/products/create-faker")
+				div.field
+					label Cuantos productos deseas crear
+					input(type="number" name="quantity")
+				div.field
+					button.ui.button.secondary Generar 
+
+	

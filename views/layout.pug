@@ -1,0 +1,21 @@
+DOCTYPE
+html
+	head
+		meta(charset="utf-8")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" rel="stylesheet" type="text/css")
+		link(href="/css/styles.css" rel="stylesheet" type="text/css")
+		title Nodejs Pagination
+	body
+
+		div.ui.inverted.segment
+			div.ui.inverted.secondary.pointing.menu
+				a(href="/products" class="item") Products
+				a(href="/products/create" class="item") Create Product
+				a(href="/products/create-faker" class="item") Create Faker Products
+				div.right.item
+					div.ui.action.input
+						input(type="search" placeholder="Find product by title")
+						button.ui.button Search
+
+		div.ui.container.mt-5
+			block content	

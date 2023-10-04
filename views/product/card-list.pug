@@ -1,0 +1,20 @@
+if products.length > 0
+	div.ui.link.cards
+		each product in products
+			div.card
+				div.image
+					img(src= product.image alt= product.title)
+				div.content
+					div.header #{product.title}
+					div.meta
+						a(href="#")= product.category
+					div.description
+						|	#{product.description}
+				div.extra.content
+					span.right.floated Joined in 2013
+					span
+						i.user.icon
+						|	75 Friends
+else 
+	div.no-products-found
+		h3 No product found

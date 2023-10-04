@@ -1,0 +1,23 @@
+.ui.segment {
+  margin: 0;
+  border-radius: 0;
+}
+
+.ui.secondary.pointing.menu {}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.ui.pagination.menu {
+  margin: 2rem 0;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center
+}

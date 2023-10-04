@@ -1,0 +1,53 @@
+extends ../layout
+block content
+
+	h1 Product List 
+
+	div.mt-5
+		
+		//- pre= products
+		//- pre=current
+		//- pre= pages
+
+		include ./card-list
+
+		if pages
+			div.ui.two.column.centered.grid
+				div.column
+					div.ui.pagination.menu.mt-5
+
+
+						//- FIRST PAGE
+						if current === 1
+							a(href="#" class="item active" style="pointer-events: none") First Page
+						else 
+							a(href="/products/1" class="item") First Page
+
+
+						//- PAGES
+						- var i = current > 5 ? current - 4 : 1
+
+						if i !== 1
+							a(href= i class="item") ...
+						
+						while i <= current + 4 && i <= pages
+
+							if i === current
+								a(href= i class="item")= i
+							else 
+								a(href=`/products/${i}` class="item")= i
+
+							if i === current + 4 && i  < pages
+								a(href= i class="item") ...
+
+							- i++
+
+							
+						
+					
+
+						//- LAST PAGE
+						if current === pages
+							a(href="#" class="item active" style="pointer-events: none") Last Page
+						else
+							a(href=`/products/${pages}` class="item") Last Page
